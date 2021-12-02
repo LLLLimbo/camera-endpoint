@@ -1,0 +1,124 @@
+{
+  "events": [
+    {
+      "id": "carIdentify",
+      "name": "车牌识别事件",
+      "direction": 0,
+      "type": "info",
+      "outputData": [
+        {
+          "id": "vehicleLaneKey",
+          "name": "摄像机唯一标识",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "ipaddr",
+          "name": "设备ip地址",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "license",
+          "name": "车牌号码字符串",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "colorType",
+          "name": "车牌颜色",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "type",
+          "name": "车牌类型",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "confidence",
+          "name": "识别结果可信度",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "scanTime",
+          "name": "识别时间",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "imageFile",
+          "name": "图像地址",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "imageFragmentFile",
+          "name": "车牌缩略图地址",
+          "dataType": "string",
+          "description": ""
+        },
+        {
+          "id": "triggerType",
+          "name": "触发类型",
+          "dataType": "string",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "id": "conUrl",
+      "name": "连接地址",
+      "dataType": "array",
+      "description": "NATS服务器地址",
+      "defaultValue": [
+        "nats://127.0.0.1:4222"
+      ]
+    },
+    {
+      "id": "brightness",
+      "name": "屏幕亮度",
+      "dataType": "int",
+      "description": ""
+    }
+  ],
+  "functions": [
+    {
+      "id": "setBrt",
+      "name": "设置亮度",
+      "direction": 0,
+      "inputData": [
+        {
+          "id": "channelout",
+          "name": "485端口号",
+          "dataType": "int",
+          "description": ""
+        },
+        {
+          "id": "brightness",
+          "name": "亮度",
+          "dataType": "int",
+          "description": ""
+        }
+      ],
+      "outputData": [
+        {
+          "id": "resultCode",
+          "name": "返回码",
+          "dataType": "int",
+          "description": ""
+        },
+        {
+          "id": "info",
+          "name": "返回信息",
+          "dataType": "string",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
